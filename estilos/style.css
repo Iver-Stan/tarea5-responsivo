@@ -1,0 +1,68 @@
+body{
+    display: grid;
+    grid-template-areas: "header header header"
+                         "nav nav nav"
+                         "cont1 cont1 cont1"
+                         "footer footer footer";
+    
+}
+
+header{
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+    background-color: rgb(20, 28, 37);
+}
+main {
+    display: grid;
+    grid-area: cont1;
+    grid-template-areas: "a1 a2 a3";
+    grid-template-columns: auto 25% 25%;
+    padding: 5px;
+}
+main .a1{
+    grid-area: a1;
+}
+main .a2{
+    display: flex;
+    grid-area: a2;
+    justify-content: center;
+    align-items: center;
+}
+main .a3{
+    display: flex;
+    grid-area: a3;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-img {
+    height: 470px; /* Ajusta la altura que desees */
+    max-width: 640px;
+    object-fit: cover; /* Para que la imagen no se deforme */
+  }
+h1{
+    text-align: center;
+    background-color: rgb(0, 0, 71);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: aliceblue;
+}
+footer{
+    grid-area: footer;
+}
+ nav .navbar .container-fluid{
+    background-color: rgb(104, 152, 255);
+ }
+
+ @media screen and (max-width: 760px) {
+    main {
+        display: grid;
+        grid-area: cont1;
+        grid-template-areas: "a1"
+                            "a2"
+                            "a3";
+        grid-template-columns: auto;
+       
+    }
+  }
